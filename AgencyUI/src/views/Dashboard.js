@@ -106,7 +106,7 @@ function Dashboard() {
             <Card className="card-chart">
               <CardHeader>
                 <h5 className="card-category">2021 Sales</h5>
-                <CardTitle tag="h4">All products</CardTitle>
+                <CardTitle tag="h4">All properties</CardTitle>
                 <UncontrolledDropdown>
                   <DropdownToggle
                     className="btn-round btn-outline-default btn-icon"

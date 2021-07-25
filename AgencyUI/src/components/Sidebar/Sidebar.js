@@ -1,21 +1,5 @@
-/*!
 
-=========================================================
-* Now UI Dashboard React - v1.5.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*eslint-disable*/
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Nav } from "reactstrap";
@@ -49,7 +33,7 @@ function Sidebar(props) {
     <div className="sidebar" data-color={props.backgroundColor}>
       <div className="logo">
         <a
-          href="https://www.creative-tim.com?ref=nudr-sidebar"
+          href="#"
           className="simple-text logo-mini"
           target="_blank"
         >
@@ -58,11 +42,11 @@ function Sidebar(props) {
           </div>
         </a>
         <a
-          href="https://www.creative-tim.com?ref=nudr-sidebar"
+          href="#"
           className="simple-text logo-normal"
           target="_blank"
         >
-          Creative Tim
+        REAL PROPERTY
         </a>
       </div>
       <div className="sidebar-wrapper" ref={sidebar}>

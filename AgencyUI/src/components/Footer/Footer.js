@@ -29,46 +29,46 @@ function Footer(props) {
           <ul>
             <li>
               <a
-                href="https://www.creative-tim.com?ref=nudr-footer"
+                href="#"
                 target="_blank"
               >
-                Creative Tim
+                
               </a>
             </li>
             <li>
               <a
-                href="https://presentation.creative-tim.com?ref=nudr-footer"
+                href="#"
                 target="_blank"
               >
-                About Us
+              
               </a>
             </li>
             <li>
               <a
-                href="https://blog.creative-tim.com?ref=nudr-footer"
+                href="#"
                 target="_blank"
               >
-                Blog
+                
               </a>
             </li>
           </ul>
         </nav>
         <div className="copyright">
-          &copy; {1900 + new Date().getYear()}, Designed by{" "}
+          &copy; {1900 + new Date().getYear()},   REALPROPERTY{" "}
           <a
-            href="https://www.invisionapp.com"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Invision
+            
           </a>
           . Coded by{" "}
           <a
-            href="https://www.creative-tim.com?ref=nudr-footer"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Creative Tim
+            ROJA TECHNOLOGIES
           </a>
           .
         </div>

@@ -168,14 +168,10 @@ function DemoNavbar(props) {
               <DropdownToggle caret nav>
                 <i className="now-ui-icons location_world" />
                 <p>
-                  <span className="d-lg-none d-md-block">Some Actions</span>
+                  <span className="d-lg-none d-md-block"></span>
                 </p>
               </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem tag="a">Action</DropdownItem>
-                <DropdownItem tag="a">Another Action</DropdownItem>
-                <DropdownItem tag="a">Something else here</DropdownItem>
-              </DropdownMenu>
+              
             </Dropdown>
             <NavItem>
               <Link to="#pablo" className="nav-link">
