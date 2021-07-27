@@ -28,7 +28,7 @@ function invoiceDetailsReducer(state={invoices:{}},action){
     }
 }
 
-function MyinvoicesReducer(state={invoices:[]},action){
+function myInvoicesReducer(state={invoices:[]},action){
     switch(action.type){
         case MY_INVOICES_LIST_REQUEST:
             return {loading:true};
@@ -39,8 +39,10 @@ function MyinvoicesReducer(state={invoices:[]},action){
                     default:
                         return state;
     }
-}
-export default {
+} 
+export  {
     invoiceDetailsReducer,
-    listInvoicesReducer
+    listInvoicesReducer,
+    myInvoicesReducer
+    
 }

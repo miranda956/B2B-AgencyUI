@@ -15,88 +15,95 @@ switch (action.type){
 
 }
 
+function bookCreateReducer(state={},action){
+    switch(action.type){
+        case BOOK_CREATE_REQUEST:
+            return {loading:true};
+            case BOOK_CREATE_SUCCESS:
+                return {loading:false,bookings:action.payload,success:true};
+                case BOOK_CREATE_FAIL:
+                    return {loading:false, error:action.payload};
+                    default:
+                        return state;
+
+
+    }
+}
 
   
   
-  function orderDetailsReducer(state = {
-    order: {
-      orderItems: [],
-      shipping: {},
+  function bookDetailsReducer(state = {
+    booking: {
+      properties: [],
       payment: {}
     }
   }, action) {
     switch (action.type) {
-      case ORDER_DETAILS_REQUEST:
+      case BOOK_DETAILS_REQUEST:
         return { loading: true };
-      case ORDER_DETAILS_SUCCESS:
-        return { loading: false, order: action.payload };
-      case ORDER_DETAILS_FAIL:
+      case BOOK_DETAILS_SUCCESS:
+        return { loading: false, bookings: action.payload };
+      case BOOK_DETAILS_FAIL:
         return { loading: false, error: action.payload };
       default: return state;
     }
   }
   
   
-  function myOrderListReducer(state = {
-    orders: []
+  function myBookingsListReducer(state = {
+    bookings: []
   }, action) {
     switch (action.type) {
-      case MY_ORDER_LIST_REQUEST:
+      case MY_BOOKINGS_LIST_REQUEST:
         return { loading: true };
-      case MY_ORDER_LIST_SUCCESS:
-        return { loading: false, orders: action.payload };
-      case MY_ORDER_LIST_FAIL:
+      case MY_BOOKINGS_LIST_SUCCESS:
+        return { loading: false, bookings: action.payload };
+      case MY_BOOKINGS_LIST_FAIL:
         return { loading: false, error: action.payload };
       default: return state;
     }
   }
   
-  function orderListReducer(state = {
-    orders: []
-  }, action) {
-    switch (action.type) {
-      case ORDER_LIST_REQUEST:
-        return { loading: true };
-      case ORDER_LIST_SUCCESS:
-        return { loading: false, orders: action.payload };
-      case ORDER_LIST_FAIL:
-        return { loading: false, error: action.payload };
-      default: return state;
-    }
-  }
   
-  function orderPayReducer(state = {
+  
+  function bookPayReducer(state = {
     order: {
-      orderItems: [],
-      shipping: {},
+      properties: [],
       payment: {}
     }
   }, action) {
     switch (action.type) {
-      case ORDER_PAY_REQUEST:
+      case BOOK_PAY_REQUEST:
         return { loading: true };
-      case ORDER_PAY_SUCCESS:
+      case BOOK_PAY_SUCCESS:
         return { loading: false, success: true };
-      case ORDER_PAY_FAIL:
+      case BOOK_PAY_SUCCESS:
         return { loading: false, error: action.payload };
       default: return state;
     }
   }
   
-  function orderDeleteReducer(state = {
-    order: {
-      orderItems: [],
-      shipping: {},
+  function bookingcancelReducer(state = {
+    bookings: {
+      properties: [],
       payment: {}
     }
   }, action) {
     switch (action.type) {
-      case ORDER_DELETE_REQUEST:
+      case BOOK_DELETE_REQUEST:
         return { loading: true };
-      case ORDER_DELETE_SUCCESS:
+      case BOOK_DELETE_SUCCESS:
         return { loading: false, success: true };
-      case ORDER_DELETE_FAIL:
+      case BOOK_DELETE_FAIL:
         return { loading: false, error: action.payload };
       default: return state;
     }
+  }  
+  export  {
+      bookListReducer,
+      bookingcancelReducer,
+      bookDetailsReducer,
+      bookPayReducer,
+      myBookingsListReducer,
+      bookCreateReducer
   }
