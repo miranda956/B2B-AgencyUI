@@ -13,7 +13,7 @@ function userSigninReducer(state = {}, action) {
     default: return state;
   }
 }
-
+  
 function userUpdateReducer(state = {}, action) {
   switch (action.type) {
     case USER_UPDATE_REQUEST:

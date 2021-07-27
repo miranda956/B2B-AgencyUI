@@ -22,19 +22,31 @@ function propertyListReducer(state = { properties: [] }, action) {
                 return {loading: false, propertyInfo:action.action.payload};
                 case PROPERTY_UPDATE_FAIL:
                     return { loading: false,error:action.action.payload};
-                    default: return state;
+                     default: return state;
     }
 
+  }
+
+  function propertyCreateReducer(state = {}, action) {
+    switch (action.type) {
+      case PROPERTY_ADD_REQUEST:
+        return { loading: true };
+      case PROPERTY_ADD_SUCCESS:
+        return { loading: false, property: action.payload, success: true };
+      case PROPERTY_ADD_FAIL:
+        return { loading: false, error: action.payload };
+      default: return state;
+    }
   }
 
 
   function propertyDetailsReducer(state = { product: { reviews: [] } }, action) {
     switch (action.type) {
-      case PRODUCT_DETAILS_REQUEST:
+      case PROPERTY_DETAILS_REQUEST:
         return { loading: true };
-      case PRODUCT_DETAILS_SUCCESS:
-        return { loading: false, product: action.payload };
-      case PRODUCT_DETAILS_FAIL:
+      case PROPERTY_DETAILS_SUCCESS:
+        return { loading: false, property: action.payload };
+      case PROPERTY_DETAILS_FAIL:
         return { loading: false, error: action.payload };
       default:
         return state;
@@ -54,38 +66,15 @@ function propertyListReducer(state = { properties: [] }, action) {
     }
   }
   
-  function productSaveReducer(state = { product: {} }, action) {
-    switch (action.type) {
-      case PRODUCT_SAVE_REQUEST:
-        return { loading: true };
-      case PRODUCT_SAVE_SUCCESS:
-        return { loading: false, success: true, product: action.payload };
-      case PRODUCT_SAVE_FAIL:
-        return { loading: false, error: action.payload };
-      default:
-        return state;
-    }
-  }
-  function productReviewSaveReducer(state = {}, action) {
-    switch (action.type) {
-      case PRODUCT_REVIEW_SAVE_REQUEST:
-        return { loading: true };
-      case PRODUCT_REVIEW_SAVE_SUCCESS:
-        return { loading: false, review: action.payload, success: true };
-      case PRODUCT_REVIEW_SAVE_FAIL:
-        return { loading: false, errror: action.payload };
-      case PRODUCT_REVIEW_SAVE_RESET:
-        return {};
-      default:
-        return state;
-    }
-  }
+  
+  
   
   export {
-    productListReducer,
-    productDetailsReducer,
-    productSaveReducer,
-    productDeleteReducer,
-    productReviewSaveReducer,
+    propertyListReducer,
+    PropertyUpdateReducer,
+    propertyDeleteReducer,
+    propertyDetailsReducer,
+    propertyCreateReducer
+    
   };
   
